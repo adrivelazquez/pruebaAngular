@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule } from '@angular/forms';
 
+//servicios
+import { HttpClientModule } from '@angular/common/http';
+
 //modulos
 import { MainModule } from "./modules/main/main.module";
 
@@ -12,6 +15,8 @@ import { MainModule } from "./modules/main/main.module";
 
 import { LoginComponent } from './modules/login/login/login.component';
 import { ContentPostsComponent } from './modules/posts/content-posts/content-posts.component';
+import { FooterPostsComponent } from './modules/posts//footer-posts/footer-posts.component';
+import { HeaderPostsComponent } from './modules/posts//header-posts/header-posts.component';
 import { ContentComentariosComponent } from './modules/comentarios/content-comentarios/content-comentarios.component';
 
 @NgModule({
@@ -19,6 +24,8 @@ import { ContentComentariosComponent } from './modules/comentarios/content-comen
     AppComponent,
     LoginComponent,
     ContentPostsComponent,
+    FooterPostsComponent,
+    HeaderPostsComponent,
     ContentComentariosComponent
   ],
   imports: [
@@ -26,6 +33,7 @@ import { ContentComentariosComponent } from './modules/comentarios/content-comen
     ReactiveFormsModule,
     MainModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
   ],
   providers: [],

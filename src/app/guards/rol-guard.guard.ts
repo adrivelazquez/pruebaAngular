@@ -18,9 +18,9 @@ export class RolGuardGuard implements CanActivate {
         console.log("No es admin");
         this.router.navigate(['/login']);
         return false;
+      }else{
+        return true;
       }
-      
-      return true;
-    return true;
+
   }
 }

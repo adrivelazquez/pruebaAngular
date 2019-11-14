@@ -1,6 +1,6 @@
 export interface Post{
     userId: Number,
-    id: String,
+    id?: String,
     title?: String,
     body?: String,
 }

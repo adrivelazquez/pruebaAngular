@@ -1,0 +1,32 @@
+.table tr.active td {
+    background-color:#123456 !important;
+    color: white;
+  }
+
+  .table{
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.container{
+    padding: 5%;
+}
+tr{
+  cursor: pointer;
+}
+
+.table td {
+  border: 1px solid #ddd;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+ .table tr:nth-child(even){background-color: #f2f2f2;}
+
+ .table tr:hover {background-color: #ddd;}

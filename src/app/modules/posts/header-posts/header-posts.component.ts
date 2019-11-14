@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-header-posts',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-posts.component.scss']
 })
 export class HeaderPostsComponent implements OnInit {
+
+  @Input() idPost: string;
+  @Input() email: string;
+  @Input() nombre: string;
 
   constructor() { }
 

@@ -1,3 +1,8 @@
-<p>
-  header-posts works!
-</p>
+<mat-toolbar class="fixed-header">
+    <mat-toolbar-row>
+      <span *ngIf="idPost">ID POST SELECCIONADO: {{idPost}} </span>
+      <span *ngIf="!idPost">NINGÚN POST SELECCIONADO </span>
+      <span class="example-spacer">{{nombre}}</span>
+    </mat-toolbar-row>
+
+</mat-toolbar>

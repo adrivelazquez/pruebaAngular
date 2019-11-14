@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-footer-posts',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer-posts.component.scss']
 })
 export class FooterPostsComponent implements OnInit {
-
-  constructor() { }
+  @Input() idSeleccionado;
+  
+  constructor(private _service:ApiService) {
+    
+   }
 
   ngOnInit() {
   }
+
+
+  borrarPost(){
+    this._service.borrarPost(this.idSeleccionado);
+  }
+
+  nuevoPost(){
+    this._service.añadirPost();
+  }
+
+
 
 }

@@ -1,0 +1,25 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin-left: 200px;
+    margin-top: 64px;
+    width: 100%  !important;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 599px){
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        z-index: 2;
+        margin-top: 56px;
+        width: 100%  !important;
+      }
+  }

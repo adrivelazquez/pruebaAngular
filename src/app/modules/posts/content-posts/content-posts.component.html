@@ -1,3 +1,18 @@
-<p>
-  content-posts works!
-</p>
+<section>
+
+    <app-header-posts [idPost]="id" [email]="email" [nombre]="nombre" ></app-header-posts>
+
+    <table class="table">
+        <tr>
+        <th>Title</th>
+        <th>Body</th>
+        </tr>
+        <tr *ngFor="let post of this._service.getPosts()" (click)="enviarIdHeader(post.id)" [class.active]="post.id == selectedRow">  
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+        </tr>
+    </table>
+
+  <app-footer-posts [idSeleccionado]="seleccionado"></app-footer-posts>
+
+</section>

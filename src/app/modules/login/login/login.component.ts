@@ -34,9 +34,10 @@ async enviarFormulario() {
   if(email == "admin@admin.com"){
     localStorage.setItem('ROL', 'admin');
     console.log("rol admin");
+  }else{
+    localStorage.setItem('ROL', 'user');
   }
-
-  //guardamos la informacion del usuario en variables locales
+  
   localStorage.setItem('email', email);
   localStorage.setItem('password', password);
   localStorage.setItem('logged', 'true');

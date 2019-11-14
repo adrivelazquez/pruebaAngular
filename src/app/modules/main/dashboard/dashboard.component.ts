@@ -20,9 +20,17 @@ export class DashboardComponent {
   constructor(private breakpointObserver: BreakpointObserver) {
 
     if(localStorage.getItem("logged")=='true'){
-      this.logout==true;
+      this.logout=true;
     }
 
   }
+
+  exit(){
+    localStorage.setItem('email', null);
+    localStorage.setItem('password', null);
+    localStorage.setItem('logged', 'false');
+    localStorage.setItem('ROL', null);
+  }
+
   
   }
