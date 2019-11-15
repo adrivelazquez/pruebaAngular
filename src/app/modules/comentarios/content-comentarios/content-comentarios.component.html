@@ -1,3 +1,21 @@
-<p>
-  content-comentarios works!
-</p>
+<section>
+    <button id="logout" mat-stroked-button color="warn" (click)="exit()">Cerrar sesión</button>
+    <app-header-comentarios [total]="totalComentarios" [idPost]="idBuscar" [nombre]="nombre"></app-header-comentarios>
+
+  <mat-card class="buscador">
+      <mat-form-field >
+          <input matInput placeholder="Introduce ID del post" #myInputID >
+      </mat-form-field>
+      <button id="btnBuscar" mat-raised-button color="primary" (click)="buscar(myInputID.value)">Buscar</button>
+  </mat-card>
+
+  <div class="listado" *ngFor="let comentario of comentarios$ | async">
+    <mat-card>
+      <p><strong>ID post: </strong>{{comentario.postId}}</p>
+      <p><strong>Nombre: </strong>{{comentario.name}}</p>
+      <p><strong>Email: </strong>{{comentario.email}}</p>
+      <p><strong>Comentario: </strong>{{comentario.body}}</p>
+    </mat-card>
+  </div>
+
+</section>

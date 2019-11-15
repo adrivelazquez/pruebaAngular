@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -15,22 +17,17 @@ export class DashboardComponent {
       map(result => result.matches)
     );
 
-    logout: boolean=false;
+    logeado: boolean=false;
     
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver,private router: Router) {
 
     if(localStorage.getItem("logged")=='true'){
-      this.logout=true;
+      this.logeado=true;
     }
 
   }
 
-  exit(){
-    localStorage.setItem('email', null);
-    localStorage.setItem('password', null);
-    localStorage.setItem('logged', 'false');
-    localStorage.setItem('ROL', null);
-  }
+
 
   
   }

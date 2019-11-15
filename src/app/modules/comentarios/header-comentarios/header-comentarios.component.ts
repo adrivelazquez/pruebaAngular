@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-comentarios',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComentariosComponent implements OnInit {
 
-  constructor() { }
+  @Input() total;
+  @Input() idPost;
+  @Input() nombre;
+
+  constructor() {
+   }
 
   ngOnInit() {
+
   }
 
 }

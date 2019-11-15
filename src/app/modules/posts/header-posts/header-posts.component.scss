@@ -4,10 +4,11 @@
     left: 0;
     z-index: 2;
     margin-left: 200px;
-    margin-top: 64px;
     width: 100%  !important;
+    background-color:#3f51b5 !important;
+    color: white !important;
   }
-  .example-spacer {
+  .spacer {
     flex: 1 1 auto;
     text-align: center;
   }

@@ -7,7 +7,7 @@ import { ApiService } from '../../../services/api.service';
   styleUrls: ['./footer-posts.component.scss']
 })
 export class FooterPostsComponent implements OnInit {
-  @Input() idSeleccionado;
+  @Input() idSeleccionado:any;
   
   constructor(private _service:ApiService) {
     
@@ -18,6 +18,7 @@ export class FooterPostsComponent implements OnInit {
 
 
   borrarPost(){
+    console.log(this.idSeleccionado);
     this._service.borrarPost(this.idSeleccionado);
   }
 

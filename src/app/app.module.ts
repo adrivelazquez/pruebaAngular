@@ -12,12 +12,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainModule } from "./modules/main/main.module";
 
 //componentes
-
 import { LoginComponent } from './modules/login/login/login.component';
 import { ContentPostsComponent } from './modules/posts/content-posts/content-posts.component';
 import { FooterPostsComponent } from './modules/posts//footer-posts/footer-posts.component';
 import { HeaderPostsComponent } from './modules/posts//header-posts/header-posts.component';
 import { ContentComentariosComponent } from './modules/comentarios/content-comentarios/content-comentarios.component';
+import { HeaderComentariosComponent } from './modules/comentarios/header-comentarios/header-comentarios.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ContentComentariosComponent } from './modules/comentarios/content-comen
     ContentPostsComponent,
     FooterPostsComponent,
     HeaderPostsComponent,
+    HeaderComentariosComponent,
     ContentComentariosComponent
   ],
   imports: [

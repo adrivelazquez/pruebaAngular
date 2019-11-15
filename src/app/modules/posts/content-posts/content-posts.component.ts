@@ -1,6 +1,5 @@
 import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
-import { Observable, Subject, of } from 'rxjs';
-import { Post } from '../../../models/post.model';
+import {Router} from '@angular/router';
 import { ApiService } from '../../../services/api.service';
 
 
@@ -17,9 +16,7 @@ export class ContentPostsComponent implements OnInit {
   selectedRow : string;
   seleccionado:any=null;
 
-  posts: Post[]; 
-
-  constructor(private _service:ApiService) {       
+  constructor(private _service:ApiService,private router: Router) {       
   }
 
   ngOnInit() {
@@ -32,6 +29,15 @@ export class ContentPostsComponent implements OnInit {
     this.id=idSeleccionado;
     this.seleccionado=idSeleccionado;
   }
+
+  exit(){
+    localStorage.setItem('email', null);
+    localStorage.setItem('password', null);
+    localStorage.setItem('logged', 'false');
+    localStorage.setItem('ROL', null);
+    this.router.navigate(['login']);
+  }
+
 
 }
 
