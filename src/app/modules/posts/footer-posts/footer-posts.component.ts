@@ -20,6 +20,7 @@ export class FooterPostsComponent implements OnInit {
   borrarPost(){
     console.log(this.idSeleccionado);
     this._service.borrarPost(this.idSeleccionado);
+    this.idSeleccionado=null;
   }
 
   nuevoPost(){

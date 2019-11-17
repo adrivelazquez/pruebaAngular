@@ -30,14 +30,6 @@ export class ContentPostsComponent implements OnInit {
     this.seleccionado=idSeleccionado;
   }
 
-  exit(){
-    localStorage.setItem('email', null);
-    localStorage.setItem('password', null);
-    localStorage.setItem('logged', 'false');
-    localStorage.setItem('ROL', null);
-    this.router.navigate(['login']);
-  }
-
 
 }
 

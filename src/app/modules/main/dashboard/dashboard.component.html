@@ -22,8 +22,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Prueba Angular {{logeado}}</span>
+      <span>Prueba Angular</span>
     </mat-toolbar>
+    <button id="logout" *ngIf="router.url != '/login'" mat-stroked-button color="warn" (click)="exit()">Cerrar sesión</button>
     <ng-content>
       
     </ng-content>

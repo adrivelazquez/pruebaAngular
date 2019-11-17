@@ -16,6 +16,10 @@
   color:red;
 }
 
+#logout{
+  margin: 10px;
+}
+
 a.active{
   font-weight: bold;
 }

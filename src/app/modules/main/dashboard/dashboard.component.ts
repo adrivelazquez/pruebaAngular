@@ -28,6 +28,15 @@ export class DashboardComponent {
   }
 
 
+  exit(){
+    localStorage.setItem('email', null);
+    localStorage.setItem('password', null);
+    localStorage.setItem('logged', 'false');
+    localStorage.setItem('ROL', null);
+    this.router.navigate(['login']);
+  }
+
+
 
   
   }
